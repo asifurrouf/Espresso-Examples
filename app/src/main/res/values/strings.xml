@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TestProject</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+
+    <string name="example_text_before">This is an example text.</string>
+    <string name="example_text_after">This is an example text after.</string>
+    <string name="example_text_button">Change Text</string>
+    <string name="example_switch_label">Example Switch</string>
+
+</resources>
