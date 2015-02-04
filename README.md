@@ -144,6 +144,10 @@ Below is a short list of the Widgets and Views that are tested in this Repositor
 
 * Date and Time Widgets
 
+### To be demonstrated
+
+* Idling Resources
+
 
 ## Contact me
 [+JordanTerry](https://plus.google.com/+JordanTerry/posts)
