@@ -4,6 +4,10 @@ A reference project for all of those things you forgot how to do in [Espresso](h
 ## About
 This repository contains an example Android application and a number of helpful Espresso UI tests to act as a helpful reference.
 
+## Usage
+
+To use test execute the tests you will can execute using the gradle command: `./gradlew app:createDebugCoverageReport` or by building the tests with a test configuration in Android Studio.
+
 
 ## Libraries Used
 
@@ -110,6 +114,10 @@ Assertions are performed using the *check(ViewAssertion)* method.
     * [**MainActivityTests**:testSwapText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
     * [**MainActivityTests**:testTypeText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
     * [**MainActivityTests**:testTypeTextWithTextAndId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+## JaCoCo Coverage
+
+I have included the [JaCoCo](http://www.eclemma.org/jacoco/) Coverage plugin to help with identifying any parts of the code that have been missed during testing. The Code Coverage can be found in the following directory structure within the module you are testing `build/outputs/reports/coverage/debug/index.html`
 
 ## Widgets
 
