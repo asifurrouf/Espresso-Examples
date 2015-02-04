@@ -30,13 +30,5 @@
         android:id="@+id/exampleEditText"
         android:layout_below="@id/exampleButton" />
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/example_switch_label"
-        android:id="@+id/exampleSwitch"
-        android:layout_below="@+id/exampleEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp"
-        android:checked="false" />
+
 </RelativeLayout>

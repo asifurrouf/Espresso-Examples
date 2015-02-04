@@ -8,13 +8,21 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.EspressoTestTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SwitchActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".activities.NavigationDrawerActivity"
+            android:label="@string/app_name">
         </activity>
     </application>
 

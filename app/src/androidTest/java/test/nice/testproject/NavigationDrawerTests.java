@@ -5,6 +5,8 @@ import android.test.suitebuilder.annotation.SmallTest;
 
 import org.junit.Before;
 
+import test.nice.testproject.activities.NavigationDrawerActivity;
+
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -14,11 +16,11 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
-public class NavigationDrawerTests extends ActivityInstrumentationTestCase2<MainActivity> {
+public class NavigationDrawerTests extends ActivityInstrumentationTestCase2<NavigationDrawerActivity> {
     private static String TAG = NavigationDrawerTests.class.getSimpleName();
 
     public NavigationDrawerTests() {
-        super(MainActivity.class);
+        super(NavigationDrawerActivity.class);
     }
 
     @Override
@@ -30,6 +32,7 @@ public class NavigationDrawerTests extends ActivityInstrumentationTestCase2<Main
 
     /**
      * Test that clicking on a Navigation Drawer Item will open the correct fragment.
+     * Espresso: openDrawer, onView, withText, perform, click, matches, check, isDisplayed
      */
     @SmallTest
     public void testNavigationDrawerItemClick() {
