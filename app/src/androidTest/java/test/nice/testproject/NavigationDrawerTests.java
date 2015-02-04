@@ -51,4 +51,5 @@ public class NavigationDrawerTests extends ActivityInstrumentationTestCase2<Navi
         openDrawer(R.id.my_drawer_layout);
         pressBack();
     }
+
 }
