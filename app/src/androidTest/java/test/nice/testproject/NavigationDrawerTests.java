@@ -3,7 +3,6 @@ package test.nice.testproject;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import org.junit.After;
 import org.junit.Before;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -27,13 +26,6 @@ public class NavigationDrawerTests extends ActivityInstrumentationTestCase2<Main
     public void setUp() throws Exception {
         super.setUp();
         getActivity();
-    }
-
-    @Override
-    @After
-    public void tearDown() throws Exception {
-        super.tearDown();
-
     }
 
     /**

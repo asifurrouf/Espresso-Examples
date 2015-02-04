@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -16,6 +18,7 @@ import android.widget.ListView;
 public class MainActivity extends ActionBarActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
+    private String[] mMenuItems;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +28,11 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.my_drawer_layout);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.app_name, R.string.app_name);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-        String[] menuItems = {"Menu One", "Menu Two", "Menu Three", "Menu Four"};
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menuItems);
+        mMenuItems = new String[]{"Menu One", "Menu Two", "Menu Three", "Menu Four"};
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mMenuItems);
 
         ListView navigationList = (ListView) findViewById(R.id.navigation_menu);
+        navigationList.setOnItemClickListener(new NavigationDrawerClickListener());
         navigationList.setAdapter(itemsAdapter);
 
         if (savedInstanceState == null) {
@@ -75,6 +79,18 @@ public class MainActivity extends ActionBarActivity {
             return;
         }
         super.onBackPressed();
+    }
+
+    public class NavigationDrawerClickListener implements ListView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            getFragmentManager().beginTransaction()
+                    .add(R.id.container, NavigationFragment.newInstance(position, mMenuItems[position]), NavigationFragment.TAG)
+                    .addToBackStack(NavigationFragment.TAG)
+                    .commit();
+            mDrawerLayout.closeDrawers();
+        }
     }
 
 }

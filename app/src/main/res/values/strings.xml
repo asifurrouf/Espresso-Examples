@@ -12,4 +12,6 @@
     <string name="example_text_button">Change Text</string>
     <string name="example_switch_label">Example Switch</string>
 
+    <string name="example_text_fragment">Example</string>
+
 </resources>
