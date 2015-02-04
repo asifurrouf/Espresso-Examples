@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.EspressoTestTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Primary Colour of the App Bar -->
+        <item name="colorPrimary">@color/primary_colour</item>
+a
+
+        <!-- Dark Primary Colour of the the theme -->
+        <item name="colorPrimaryDark">@color/primary_colour_dark</item>
+
+        <!-- Accent colour of the Theme -->
+        <item name="colorAccent">@color/primary_colour_accent</item>
+
+        <!-- Primary Theme Text Colour -->
+        <item name="android:textColorPrimary">@color/primary_colour_text</item>
+
+        <!-- Secondary Theme Text Colour -->
+        <item name="android:textColorSecondary">@color/secondary_colour_text</item>
+
+
+    </style>
+
+    <style name="Theme.EspressoTestThemeAppBarDarkOverflow" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Primary Colour of the App Bar -->
+        <item name="colorPrimary">@color/primary_colour</item>
+
+        <!-- Dark Primary Colour of the the theme -->
+        <item name="colorPrimaryDark">@color/primary_colour_dark</item>
+
+        <!-- Primary Theme Text Colour -->
+        <item name="android:textColorPrimary">@color/primary_colour_text_appbar</item>
+        <!-- Secondary Theme Text Colour -->
+        <item name="android:textColorSecondary">@color/primary_colour_text_appbar</item>
+
+    </style>
+</resources>

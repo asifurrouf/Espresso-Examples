@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_colour">#6b2574</color>
+    <color name="primary_colour_dark">#484848</color>
+    <color name="primary_colour_light">#484848</color>
+    <color name="primary_colour_accent">#536dfe</color>
+    <color name="primary_colour_text">#212121</color>
+    <color name="primary_colour_text_appbar">@color/white</color>
+    <color name="secondary_colour_text">#727272</color>
+    <color name="divider_colour">#b6b6b6</color>
+    <color name="white">#ffffff</color>
+</resources>

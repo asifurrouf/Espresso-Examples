@@ -8,6 +8,8 @@ import static android.support.test.espresso.Espresso.openContextualActionModeOve
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.contrib.DrawerActions.closeDrawer;
+import static android.support.test.espresso.contrib.DrawerActions.openDrawer;
 import static android.support.test.espresso.matcher.ViewMatchers.isChecked;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
@@ -103,6 +105,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
     /**
      * But why do that when you can chain it?
+     * A three line test can now be written in a single line.
      */
     @SmallTest
     public void testSwitchWithTextVariableExample() {
@@ -112,6 +115,17 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
                 .check(matches(not(isChecked())))
                 .perform(click())
                 .check(matches(isChecked()));
+    }
+
+
+    /**
+     * Open Navigation Drawer, click on a menu item then close the item.
+     */
+    @SmallTest
+    public void testClickNavigationDrawerItem() {
+        openDrawer(R.id.my_drawer_layout);
+        onView(withText("Menu One")).perform(click());
+        closeDrawer(R.id.my_drawer_layout);
     }
 
 }
