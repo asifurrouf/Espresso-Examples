@@ -15,7 +15,6 @@ This isn't an App to use, it features a number of components that are automatica
         }
     ```
 
-
 * Espresso 2.0 Core
 
     ```gradle
@@ -47,7 +46,7 @@ Below are a list of methods used in the examples in this repo.
 
 ### Matchers
 
-The *onView(Matchers)* method can accept Matchers to identify a View.
+The *onView(Matcher<View>)* method can accept Matchers to identify a View.
 
 * withText(String)
     * [**MainActivityTests**:testSwapText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
@@ -70,13 +69,13 @@ The *onView(Matchers)* method can accept Matchers to identify a View.
 
 #### Hamcrest Matchers
 
-* allOf(Matcher*(s)*)
+* allOf(Matcher<T> ...)
     * [**MainActivityTests**:testSwapText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
     * [**MainActivityTests**:testTypeTextWithTextAndId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
     * [**NavigationDrawerTests**:testNavigationDrawerItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
 
 
-* not(Matcher)
+* not(Object)
     * [**SwitchActivityTests**:testSwitchWithId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
     * [**SwitchActivityTests**:testSwitchWithText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
     * [**SwitchActivityTests**:testSwitchWithChainingExample()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
@@ -103,7 +102,7 @@ Actions are performed using the *perform(ViewAction)* method.
 ### Assertions
 Assertions are performed using the *check(ViewAssertion)* method.
 
-* matches(Matcher)
+* matches(Matcher<T>)
     * [**NavigationDrawerTests**:testNavigationDrawerItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
     * [**SwitchActivityTests**:testSwitchWithId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
     * [**SwitchActivityTests**:testSwitchWithText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
