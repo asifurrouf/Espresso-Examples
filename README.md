@@ -1,8 +1,8 @@
 # Espresso-Examples
-A reference project for all of those things you forgot how to do in Espresso!
+A reference project for all of those things you forgot how to do in [Espresso](https://code.google.com/p/android-test-kit/wiki/Espresso)!
 
 ## About
-This isn't an App to use, it features a number of components that are automatically tested by the Espresso Library. The code is more helpful as a reference.
+This repository contains an example Android application and a number of helpful Espresso UI tests to act as a helpful reference.
 
 
 ## Libraries Used
@@ -40,9 +40,9 @@ This isn't an App to use, it features a number of components that are automatica
     ```
 
 
-## References
+## Usages
 
-Below are a list of methods used in the examples in this repo.
+Below is an example of theEspresso methods that have been used so far in the example application.
 
 ### Matchers
 
@@ -110,6 +110,31 @@ Assertions are performed using the *check(ViewAssertion)* method.
     * [**MainActivityTests**:testSwapText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
     * [**MainActivityTests**:testTypeText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
     * [**MainActivityTests**:testTypeTextWithTextAndId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+## Widgets
+
+Below is a short list of the Widgets and Views that are tested in this Repository.
+### Tested
+* TextView
+
+* Button
+
+* EditText
+
+* Overflow Menu
+
+* App Drawer
+
+### To be tested
+* Spinner
+
+* Progress Bar
+
+* ViewPager
+
+* PagerIndicator
+
+* Date and Time Widgets
 
 
 ## Contact me
