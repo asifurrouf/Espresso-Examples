@@ -56,7 +56,7 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
 
     /**
      * Type text and confirm that text has been typed by searching for the text
-     * Espresso onView, withId, allOf, check, matches, isDisplayed, perform, typeText
+     * Espresso onView, withId, check, matches, isDisplayed, perform, typeText
      */
     @SmallTest
     public void testTypeText() {

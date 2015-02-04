@@ -35,11 +35,12 @@ public class SwitchActivityTests extends ActivityInstrumentationTestCase2<Switch
         onView(withId(R.id.exampleSwitch)).check(matches(not(isChecked())));
         onView(withId(R.id.exampleSwitch)).perform(click());
         onView(withId(R.id.exampleSwitch)).check(matches(isChecked()));
+
     }
 
     /**
      * Click a switch using its label value.
-     * Espresso onView, withText, check, matches, isChecked, perform
+     * Espresso onView, withText, check, matches, isChecked, perform, not
      */
     @SmallTest
     public void testSwitchWithText() {
@@ -51,9 +52,10 @@ public class SwitchActivityTests extends ActivityInstrumentationTestCase2<Switch
     /**
      * But why do that when you can chain it?
      * A three line test can now be written in a single line.
+     * Espresso onView, withText, check, matches, not, isChecked, perform, click
      */
     @SmallTest
-    public void testSwitchWithTextVariableExample() {
+    public void testSwitchWithChainingExample() {
         // Start with a ViewInteraction
         onView(withText(R.string.example_switch_label))
         // Chain the methods you want to call.
