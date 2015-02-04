@@ -10,11 +10,8 @@ This isn't an App to use, it features a number of components that are automatica
 * Android Testing Library
 
     ```gradle
-
         dependencies {
-            ...
             androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
-            ...
         }
     ```
 
@@ -22,11 +19,8 @@ This isn't an App to use, it features a number of components that are automatica
 * Espresso 2.0 Core
 
     ```gradle
-
         dependencies {
-            ...
             androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
-            ...
         }
     ```
 
@@ -34,20 +28,15 @@ This isn't an App to use, it features a number of components that are automatica
 
     ```gradle
         dependencies {
-            ...
             androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.0'
-            ...
         }
     ```
 
 * Jacocco Code Coverage
 
     ```gradle
-
         debug {
-            ...
             testCoverageEnabled true
-            ...
         }
     ```
 
