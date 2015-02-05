@@ -2,7 +2,7 @@
 A reference project for all of those things you forgot how to do in [Espresso](https://code.google.com/p/android-test-kit/wiki/Espresso)!
 
 ## About
-This repository contains an example Android application and a number of helpful Espresso UI tests to act as a helpful reference. The Espresso Package [Reference](https://android-test-kit.googlecode.com/git/docs/javadocs/espresso/espresso-core-2.0-javadoc/reference/android/support/test/espresso/package-summary.html) can be found here.
+This repository contains an example Android application and a number of helpful Espresso UI tests to act as a helpful reference. The Espresso [Package Reference](https://android-test-kit.googlecode.com/git/docs/javadocs/espresso/espresso-core-2.0-javadoc/reference/android/support/test/espresso/package-summary.html) can be found here.
 
 ## How to use
 
