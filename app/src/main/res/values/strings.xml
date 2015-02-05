@@ -27,4 +27,6 @@
     <string name="top_text">Top</string>
     <string name="bottom_text">Bottom</string>
 
+    <string name="hierarchy_text">Hierarchy Text</string>
+
 </resources>

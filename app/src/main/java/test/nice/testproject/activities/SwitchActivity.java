@@ -1,9 +1,7 @@
 package test.nice.testproject.activities;
 
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 
 import test.nice.testproject.R;
@@ -11,9 +9,6 @@ import test.nice.testproject.fragments.SwitchFragment;
 
 
 public class SwitchActivity extends ActionBarActivity {
-    private DrawerLayout mDrawerLayout;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private String[] mMenuItems;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

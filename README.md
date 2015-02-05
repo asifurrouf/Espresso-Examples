@@ -68,6 +68,9 @@ The `onView(Matcher<View>)` method can accept Matchers to identify a View.
     * [NavigationDrawerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
     * [ViewPagerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/ViewPagerTests.java)
 
+* `isAssignableFrom(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
 #### Hamcrest Matchers
 
 * `allOf(Matcher<T> ...)`
@@ -154,6 +157,13 @@ Assertions are performed using the `check(ViewAssertion)` method.
 
 * `isRightAlignedWith(Matcher)`
     * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `doesNotExist()`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `selectedDescendantsMatch(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
 
 ## Widgets
 

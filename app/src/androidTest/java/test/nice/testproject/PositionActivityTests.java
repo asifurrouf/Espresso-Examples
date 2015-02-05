@@ -14,6 +14,7 @@ import static android.support.test.espresso.assertion.PositionAssertions.isLeftO
 import static android.support.test.espresso.assertion.PositionAssertions.isRightAlignedWith;
 import static android.support.test.espresso.assertion.PositionAssertions.isRightOf;
 import static android.support.test.espresso.assertion.PositionAssertions.isTopAlignedWith;
+import static android.support.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
 public class PositionActivityTests extends ActivityInstrumentationTestCase2<PositionActivity> {
@@ -41,7 +42,7 @@ public class PositionActivityTests extends ActivityInstrumentationTestCase2<Posi
      * Is this to the left of another view.
      */
     @SmallTest
-    public void testRgihtOf() {
+    public void testRightOf() {
         onView(withId(R.id.right_text)).check(isRightOf(withId(R.id.left_text)));
     }
 
@@ -102,6 +103,13 @@ public class PositionActivityTests extends ActivityInstrumentationTestCase2<Posi
     @SmallTest
     public void testAlignedBottomOfView() {
         onView(withId(R.id.bottom_text)).check(isBottomAlignedWith(withId(R.id.parent_container)));
+    }
+
+    /**
+     * check if an element does exist
+     */
+    public void testElementDoesNotExists() {
+        onView(withId(R.id.exampleFragmentText)).check(doesNotExist());
     }
 
 
