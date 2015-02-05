@@ -4,12 +4,12 @@ A reference project for all of those things you forgot how to do in [Espresso](h
 ## About
 This repository contains an example Android application and a number of helpful Espresso UI tests to act as a helpful reference.
 
-## Usage
+## How to use
 
 To use test execute the tests you will can execute using the gradle command: `./gradlew app:createDebugCoverageReport` or by building the tests with a test configuration in Android Studio.
 
 
-## Libraries Used
+## Libraries used
 
 * Android Testing Library
 
@@ -44,7 +44,7 @@ To use test execute the tests you will can execute using the gradle command: `./
     ```
 
 
-## Usages
+## Espresso library usage and where to find them
 
 Below is an example of theEspresso methods that have been used so far in the example application.
 
@@ -73,7 +73,6 @@ The `onView(Matcher<View>)` method can accept Matchers to identify a View.
 * `allOf(Matcher<T> ...)`
     * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
     * [NavigationDrawerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
-
 
 * `not(Object)`
     * [SwitchActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
@@ -105,19 +104,22 @@ Actions are performed using the `perform(ViewAction)` method.
 * `replaceText(String)`
     * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
 
-* `swipeLeft`
+* `swipeLeft()`
     * [ViewPagerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/ViewPagerTests.java)
 
-* `swipeRight`
+* `swipeRight()`
     * [ViewPagerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/ViewPagerTests.java)
 
-* `closeSoftKeyboard`
+* `closeSoftKeyboard()`
     * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
 
-* `hasContentDescription`
+* `hasContentDescription()`
     * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
 
 * `withContentDescription(String)`
+    * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+* `scrollTo()`
     * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
 
 ### Assertions
@@ -128,9 +130,30 @@ Assertions are performed using the `check(ViewAssertion)` method.
     * [SwitchActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
     * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
 
-## JaCoCo Coverage
 
-I have included the [JaCoCo](http://www.eclemma.org/jacoco/) Coverage plugin to help with identifying any parts of the code that have been missed during testing. The Code Coverage can be found in the following directory structure within the module you are testing `build/outputs/reports/coverage/debug/index.html`
+* `isLeftOf(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `isRightOf(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `isAbove(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `isBelow(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `isLeftAlignedWith(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `isRightAlignedWith(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `isTopAlignedWith(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `isRightAlignedWith(Matcher)`
+    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
 
 ## Widgets
 
@@ -151,17 +174,22 @@ Below is a short list of the Widgets and Views that are tested in this Repositor
 ### To be tested
 * Spinner
 
-* Progress Bar
+* ProgressBar
 
 * ~~ViewPager~~
 
-* PagerIndicator
+* PagerTabStrip
 
 * Date and Time Widgets
 
 ### To be demonstrated
 
 * Idling Resources
+
+## JaCoCo Coverage
+
+The [JaCoCo](http://www.eclemma.org/jacoco/) Coverage plugin has been included to demonstrate coverage reporting. The Code Coverage can be found in the following directory structure within the module you are testing `build/outputs/reports/coverage/debug/index.html`
+
 
 
 ## Contact me
