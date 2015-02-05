@@ -16,4 +16,6 @@
 
     <string name="example_pager_text">Example</string>
 
+
+    <string name="example_content_description">Example Content Description Dest</string>
 </resources>
