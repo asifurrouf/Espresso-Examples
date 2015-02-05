@@ -14,10 +14,10 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
-public class ViewPagerFragmentTests extends ActivityInstrumentationTestCase2<ViewPagerActivity> {
-    private static String TAG = ViewPagerFragmentTests.class.getSimpleName();
+public class ViewPagerTests extends ActivityInstrumentationTestCase2<ViewPagerActivity> {
+    private static String TAG = ViewPagerTests.class.getSimpleName();
 
-    public ViewPagerFragmentTests() {
+    public ViewPagerTests() {
         super(ViewPagerActivity.class);
     }
 

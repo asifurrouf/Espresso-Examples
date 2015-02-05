@@ -53,67 +53,56 @@ Below is an example of theEspresso methods that have been used so far in the exa
 The *onView(Matcher<View>)* method can accept Matchers to identify a View.
 
 * withText(String)
-    * [**MainActivityTests**:testSwapText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testActionMenuItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testTypeText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testTypeTextWithTextAndId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithChainingExample()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**NavigationDrawerTests**:testNavigationDrawerItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
+    * [**MainActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+    * [**SwitchActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
+    * [**NavigationDrawerTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
 
 * withId(int)
-    * [**MainActivityTests**:withId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testTypeText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
+    * [**MainActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+    * [**SwitchActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
 
 * isDisplayed()
-    * [**MainActivityTests**:testTypeText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testTypeTextWithTextAndId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**NavigationDrawerTests**:testNavigationDrawerItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
+    * [**MainActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+    * [**NavigationDrawerTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
 
 #### Hamcrest Matchers
 
 * allOf(Matcher<T> ...)
-    * [**MainActivityTests**:testSwapText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testTypeTextWithTextAndId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**NavigationDrawerTests**:testNavigationDrawerItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
+    * [**MainActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+    * [**NavigationDrawerTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
 
 
 * not(Object)
-    * [**SwitchActivityTests**:testSwitchWithId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithChainingExample()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
+    * [**SwitchActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
 
 
 ### Actions
 Actions are performed using the *perform(ViewAction)* method.
 
 * click()
-    * [**MainActivityTests**:testSwapText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testActionMenuItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**NavigationDrawerTests**:testNavigationDrawerItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
-    * [**SwitchActivityTests**:testSwitchWithId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithChainingExample()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
+    * [**MainActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+    * [**NavigationDrawerTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
+    * [**SwitchActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
 
 * pressBack()
-    * [**NavigationDrawerTests**:testNavigationDrawerBackButton()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
+    * [**NavigationDrawerTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
 
 * typeText(String)
-    * [**MainActivityTests**:testTypeText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testTypeTextWithTextAndId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+    * [**MainActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+* swipeLeft
+    * [**ViewPagerTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/ViewPagerTests.java)
+
+* swipeRight
+    * [**ViewPagerTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/ViewPagerTests.java)
 
 ### Assertions
 Assertions are performed using the *check(ViewAssertion)* method.
 
 * matches(Matcher<T>)
-    * [**NavigationDrawerTests**:testNavigationDrawerItemClick()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
-    * [**SwitchActivityTests**:testSwitchWithId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**SwitchActivityTests**:testSwitchWithChainingExample()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
-    * [**MainActivityTests**:testSwapText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testTypeText()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-    * [**MainActivityTests**:testTypeTextWithTextAndId()](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+    * [**NavigationDrawerTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
+    * [**SwitchActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
+    * [**MainActivityTests**](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
 
 ## JaCoCo Coverage
 
@@ -133,12 +122,14 @@ Below is a short list of the Widgets and Views that are tested in this Repositor
 
 * App Drawer
 
+* ViewPager
+
 ### To be tested
 * Spinner
 
 * Progress Bar
 
-* ViewPager
+* ~~ViewPager~~
 
 * PagerIndicator
 
