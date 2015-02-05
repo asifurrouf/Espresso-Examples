@@ -11,6 +11,7 @@ import static android.support.test.espresso.Espresso.openContextualActionModeOve
 import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.replaceText;
+import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.hasContentDescription;
@@ -20,6 +21,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.endsWith;
+import static org.hamcrest.Matchers.not;
 import static org.hamcrest.text.StringStartsWith.startsWith;
 
 public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActivity> {
@@ -83,7 +85,7 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         onView(withText(exampleText)).check(matches(isDisplayed()));
         onView(withId(R.id.exampleEditText)).perform(clearText());
         // Check it is empty
-        onView(withText(exampleText)).check(matches(withText("")));
+        onView(withId(R.id.exampleEditText)).check(matches(withText("")));
     }
     /**
      * Type text and confirm that text has been typed by searching for the text
@@ -97,7 +99,7 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         onView(withText(exampleText)).check(matches(isDisplayed()));
         onView(withId(R.id.exampleEditText)).perform(replaceText(exampleReplaceText));
         // Check it is empty
-        onView(withText(exampleText)).check(matches(withText("")));
+        onView(allOf(withId(R.id.exampleEditText), withText(exampleReplaceText))).check(matches(isDisplayed()));
     }
     /**
      * Type text and confirm that text has been typed by searching for the text and the ID of the textbox.
@@ -148,4 +150,15 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         textEndsWith = textEndsWith.substring(textEndsWith.length() - 4);
         onView(allOf(withId(R.id.contentDescriptionText), withText(endsWith(textEndsWith)))).check(matches(isDisplayed()));
     }
+
+
+    /**
+     * Test textView endsWith
+     */
+    @SmallTest
+    public void testScrollToButton() {
+        onView(withId(R.id.offscreen_button)).check(matches(not(isDisplayed()))).perform(scrollTo()).check(matches(isDisplayed()));
+
+    }
+
 }

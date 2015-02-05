@@ -5,38 +5,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity$PlaceholderFragment">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/example_text_before"
-        android:id="@+id/exampleText"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/example_text_button"
-        android:id="@+id/exampleButton"
-        android:layout_below="@id/exampleText"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:id="@+id/exampleEditText"
-        android:layout_below="@id/exampleButton" />
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/example_text_before"
+                android:id="@+id/exampleText"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/example_content_description"
-        android:id="@+id/contentDescriptionText"
-        android:contentDescription="@string/example_content_description"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/example_text_button"
+                android:id="@+id/exampleButton"
+                android:layout_below="@id/exampleText"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:id="@+id/exampleEditText"
+                android:layout_below="@id/exampleButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/example_content_description"
+                android:id="@+id/contentDescriptionText"
+                android:contentDescription="@string/example_content_description"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/exampleEditText" />
+
+
+            <Button
+                android:id="@+id/offscreen_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/contentDescriptionText"
+                android:layout_marginTop="700dp"
+                android:text="@string/offscreen_button"/>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
