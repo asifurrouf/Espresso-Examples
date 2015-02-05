@@ -2,7 +2,7 @@
 A reference project for all of those things you forgot how to do in [Espresso](https://code.google.com/p/android-test-kit/wiki/Espresso)!
 
 ## About
-This repository contains an example Android application and a number of helpful Espresso UI tests to act as a helpful reference.
+This repository contains an example Android application and a number of helpful Espresso UI tests to act as a helpful reference. The Espresso Package [Reference](https://android-test-kit.googlecode.com/git/docs/javadocs/espresso/espresso-core-2.0-javadoc/reference/android/support/test/espresso/package-summary.html) can be found here.
 
 ## How to use
 
@@ -68,8 +68,38 @@ The `onView(Matcher<View>)` method can accept Matchers to identify a View.
     * [NavigationDrawerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
     * [ViewPagerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/ViewPagerTests.java)
 
+* `isEnabled()`
+    * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+* `isTouchable()`
+    * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+* `isChecked()`
+    * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+* `isNotChecked()`
+    * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
 * `isAssignableFrom(Matcher)`
+    * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+* `withHint(int|String)`
     * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+
+* `withParent(Matcher<T>)`
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
+
+* `isDescendentOfA(Matcher<T>)`
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
+
+* `withChild(Matcher<T>)`
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
+
+* `hasSibling(Matcher<T>)`
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
+
+* `hasDescendant(Matcher<T>)`
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
 
 #### Hamcrest Matchers
 
@@ -113,6 +143,12 @@ Actions are performed using the `perform(ViewAction)` method.
 * `swipeRight()`
     * [ViewPagerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/ViewPagerTests.java)
 
+* `swipeUp()`
+    * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
+* `swipeDown()`
+    * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
+
 * `closeSoftKeyboard()`
     * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
 
@@ -132,7 +168,6 @@ Assertions are performed using the `check(ViewAssertion)` method.
     * [NavigationDrawerTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/NavigationDrawerTests.java)
     * [SwitchActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/SwitchActivityTests.java)
     * [MainActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/MainActivityTests.java)
-
 
 * `isLeftOf(Matcher)`
     * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
@@ -162,7 +197,16 @@ Assertions are performed using the `check(ViewAssertion)` method.
     * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
 
 * `selectedDescendantsMatch(Matcher)`
-    * [PositionActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/PositionActivityTests.java)
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
+
+* `noEllipsizedText(Matcher)`
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
+
+* `selectedDescendantsMatch(Matcher)`
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
+
+* `noOverlaps(Matcher)`
+    * [HierarchyActivityTests](https://github.com/jordanterry/Espresso-Examples/blob/master/app/src/androidTest/java/test/nice/testproject/HierarchyActivityTests.java)
 
 
 ## Widgets

@@ -12,11 +12,19 @@ import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.replaceText;
 import static android.support.test.espresso.action.ViewActions.scrollTo;
+import static android.support.test.espresso.action.ViewActions.swipeDown;
+import static android.support.test.espresso.action.ViewActions.swipeUp;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.hasContentDescription;
+import static android.support.test.espresso.matcher.ViewMatchers.isChecked;
+import static android.support.test.espresso.matcher.ViewMatchers.isClickable;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.isEnabled;
+import static android.support.test.espresso.matcher.ViewMatchers.isFocusable;
+import static android.support.test.espresso.matcher.ViewMatchers.isNotChecked;
 import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
+import static android.support.test.espresso.matcher.ViewMatchers.withHint;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
@@ -54,6 +62,48 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         onView(allOf(withId(R.id.exampleText), withText(R.string.example_text_after))).check(matches(isDisplayed()));
     }
 
+
+    /**
+     * Test a button is enabled.
+     */
+    @SmallTest
+    public void testIsEnabled() {
+        onView(withId(R.id.exampleButton)).check(matches(isEnabled()));
+    }
+
+    /**
+     * Test checking a checkbox
+     */
+    @SmallTest
+    public void testCheckingACheckBox() {
+        onView(withId(R.id.enabled_checkbox)).check(matches(isNotChecked())).perform(click()).check(matches(isChecked()));
+    }
+
+    /**
+     * Test checking a checkbox
+     * Test if you can press go, or next within an EditText
+     */
+    @SmallTest
+    public void testHasIME() {
+        //hasImeAction(R.id.contentDescriptionText);
+    }
+
+    /**
+     * Test checking a checkbox
+     */
+    @SmallTest
+    public void testADisabledCheckbox() {
+        onView(withId(R.id.disabled_checkbox)).check(matches(not(isEnabled())));
+    }
+
+    /**
+     * Test a button is clickable.
+     */
+    @SmallTest
+    public void testIsClickable() {
+        onView(withId(R.id.exampleButton)).check(matches(isClickable()));
+    }
+
     /**
      * Click on a contextual menu item from the Overflow menu.
      */
@@ -62,6 +112,15 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         openContextualActionModeOverflowMenu();
         onView(withText(R.string.action_settings)).perform(click());
     }
+
+    /**
+     * Test if an EditText is focusable.
+     */
+    @SmallTest
+    public void testEditTextIsFocusable() {
+        onView(withId(R.id.exampleEditText)).check(matches(isFocusable()));
+    }
+
 
     /**
      * Type text and confirm that text has been typed by searching for the text
@@ -158,7 +217,29 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
     @SmallTest
     public void testScrollToButton() {
         onView(withId(R.id.offscreen_button)).check(matches(not(isDisplayed()))).perform(scrollTo()).check(matches(isDisplayed()));
-
     }
 
+    /**
+     * Test swipe down.
+     */
+    @SmallTest
+    public void testScrollDown() {
+        onView(withId(R.id.scroll_view)).perform(swipeUp()/* Got to swipe up to scroll down. */);
+    }
+
+    /**
+     * Test swipe down.
+     */
+    @SmallTest
+    public void testScrollUp() {
+        onView(withId(R.id.scroll_view)).perform(swipeDown()/* Got to swipe down to scroll up. */);
+    }
+
+    /**
+     * Test swipe down.
+     */
+    @SmallTest
+    public void testSelectWithHint() {
+        onView(withHint(R.string.example_text_hint)).check(matches(isDisplayed()));
+    }
 }
